@@ -2,10 +2,8 @@
 using namespace std;
 int main()
 {
-	
 	int N;
 	int S = 0;
-
 	cin >> N;
 	for (int i = 1; i <= N; i++)
 	{
@@ -17,7 +15,6 @@ int main()
 		{
 			S += i;
 		}
-
 	}
 	cout << S << endl;
 	return 0;
