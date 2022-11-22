@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <cmath>
 using namespace std;
 int main()
@@ -21,11 +21,11 @@ int main()
 	}
 	if (flag)
 	{
-		cout << "Элемент S есть среди других элементов последовательности" << endl;
+		cout << "Наличие элемента S среди других элементов последовательности" << endl;
 	}
 	else if (!flag)
 	{
-		cout << "Элемента S нет среди других элементов последовательности" << endl;
+		cout << "Отсутсвие элемента S среди других элементов последовательности" << endl;
 	}
 	return 0;
 }
