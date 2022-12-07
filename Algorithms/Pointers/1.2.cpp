@@ -2,14 +2,14 @@
 using namespace std;
 
 int main() {
-	float a;
+	int a;
 	cin >> a;
-	float b;
+	int b;
 	cin >> b;
-
-	float* p = &a;
-	float* p1 = &b;
+	
+	int* p = &a;
+	int* p1 = &b;
 
 	cout << *p + *p1 << endl;
 
-}
+ }
