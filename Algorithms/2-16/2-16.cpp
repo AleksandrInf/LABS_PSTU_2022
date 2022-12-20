@@ -5,23 +5,25 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "RUS");
-    int n;
-    int sum = 0;
+	int N; 
+	int S = 0;
+	
+	cout << "Введите количество слагаемых N" << endl;
+	cin >> N;
 
-    cin >> n;
+	for (int i = 1; i <= N; i++)
+	{
+		if (i % 2 == 1)
+		{
+			S -= i;
+		}
+		else
+		{
+			S += i;
+		}
+	}
 
-    for (int i = 1; i <= n; i++)
-    {
-        if (i % 2 == 0)
-        {
-            sum += i;
-        }
-        else
-        {
-            sum -= i;
-        }
-    }
-    cout << sum << endl;
+	cout << S << endl;
 
 	return 0;
 }
