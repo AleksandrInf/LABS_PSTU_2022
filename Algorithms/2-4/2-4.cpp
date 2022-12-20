@@ -1,33 +1,40 @@
 #include <iostream>
+
 using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL, "Russian");
-	int a = 0;
-	cin >> a;
-	if (a > 2 && a % 2 == 1)
-	{
-		int h = (a + 1) / 2;
-		int otstup = (a - 1) / 2;
-		for (int i = 0; i < h; i++)
-		{
-			for (int j = 0; j < otstup; j++)
-			{
-				cout << " ";
-			}
-			int kolvo = i * 2 + 1;
-			for(int l = 0; l < kolvo; l++)
-				cout << "*";
-			otstup -= 1;
-			cout << endl;
-		}
-		main();
-	}
-	else
-	{
-		cout << "Введите нечетное число >3" << endl;
-		main();
-	}
-} 
+    setlocale(LC_ALL, "Rus");
+    int n;
+    int numofspaces;
+    int numofstars = 1;
+    cout << "Введите основание равнобедренного треугольника N " << endl;
+    cin >> n;
 
+    if ((n <= 3) || ((int)n % 2 != 1))
+    {
+        cout << "Введите корректное значение N" << endl;
+    }
+
+    numofspaces = n / 2;
+
+    for (int i = 1; i <= (n + 1) / 2; i++)
+    {
+        for (int j = 1; j <= numofspaces; j++)
+        {
+            cout << " ";
+        }
+
+        for (int j = 1; j <= numofstars; j++)
+        {
+            cout << "*";
+        }
+
+        cout << endl;
+
+        numofspaces--;
+        numofstars += 2;
+    }
+
+    return 0;
+}
