@@ -1,34 +1,36 @@
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
 int main()
 {
     setlocale(LC_ALL, "RUS");
-    float n, a, max;
-    int i = 2;
-    int numFirst = 1;
-    int numLast = 1;
+    int num1, num2;
+    bool ordered = true;
 
-    cin >> n;
+    cout << "Введите первое число" << endl;
+    cin >> num1;
 
-    max = sin(n + 1 / n);
-
-    while (i <= n)
+    while (num1 != 0)
     {
-        a = sin(n + 1 / n);
-        if (a > max)
+        cout << "Введите следующее число" << endl;
+        cin >> num2;
+
+        if (num2 != 0 && num1 > num2)
         {
-            max = a;
-            numFirst = i;
-            numLast = i;
+            ordered = false;
         }
-        else if (a == max)
-        {
-            numLast = i;
-        }
-        i++;
+        num1 = num2;
+    }
+
+    if (ordered)
+    {
+        cout << "Последовательность упорядочена по возрастанию." << endl;
+    }
+    else
+    {
+        cout << "Последовательность не упорядочена по возрастанию." << endl;
+    }
 
     return 0;
 }
