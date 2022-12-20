@@ -5,18 +5,20 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "RUS");
+	setlocale(LC_ALL, "RUS");
 
-    int n;
+    int N;
     int sum = 0;
 
-    cin >> n;
+    cout << "Введите натуральное число N" << endl;
+    cin >> N;
 
-    while (n > 0)
+    while (N > 0)
     {
-        sum += n % 10;
-        n /= 10;
+        sum += N % 10;
+        N /= 10;
     }
     cout << sum << endl;
+
     return 0;
 }
