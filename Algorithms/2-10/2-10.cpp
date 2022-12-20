@@ -5,22 +5,24 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "RUS");
-    int n, tmp, max;
+	int n, max, num;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‡Ð¸ÑÐµÐ» Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸" << endl;
+	cin >> n;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿ÐµÑ€Ð²Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾" << endl;
+	cin >> max;
 
-    cout << "Ââåäèòå äëèíó ïîñëåäîâàòåëüíîñòè:" << endl;
-    cin >> n;
+	for (int i = 2; i <= n; i++)
+	{
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ´ÑƒÑŽÑ‰ÐµÐµ Ñ‡Ð¸ÑÐ»Ð¾" << endl;
+		cin >> num;
 
-    cout << "Ââåäèòå ïåðâîå ÷èñëî:" << endl;
-    cin >> max;
+		if (num > max)
+		{
+			max = num;
+		}
+	}
 
-    for (int i = 2; i <= n; i++)
-    {
-        cout << "Ââåäèòå ñëåäóþùåå ÷èñëî:" << endl;
-        cin >> tmp;
-        if (tmp > max)
-        {
-            max = tmp;
-        }
-    }
-    cout << "Ìàêñèìàëüíûé ýëåìåíò: " << max << endl;
+	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: " << max << endl;
+
+	return 0;
 }
