@@ -1,33 +1,42 @@
 #include <iostream>
+
 using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL, "Russian");
-	int a;
-	cin >> a;
-	if (a > 2)
+	setlocale(LC_ALL, "Rus");
+	int n;
+	int numofspaces;
+	int numofstars = 1;
+	cout << "Введите число N" << endl;
+	cin >> n;
+
+	if (n <= 2)
 	{
-		for (int i = a; i > 0; i--)
+		cout << "Введите корректное значение N" << endl;
+	}
+
+	numofspaces = 0;
+	numofstars = n;
+
+	for (int i = 1; i <= n; i++)
+	{
+		for (int j = 1; j <= numofspaces; j++)
 		{
-			int l = a - i;
-			int c = 0;
-			while (c < l) {
-				cout << " ";
-				c++;
-			}
-			int j = 0;
-			while (j < i)
-			{
-				cout << "*";
-				j++;
-			}
-			cout << endl;
+			cout << " ";
 		}
+
+		for (int j = 1; j <= numofstars; j++)
+		{
+			cout << "*";
+		}
+
+		numofspaces++;
+		numofstars--;
+
+		cout << endl;
+
 	}
-	else
-	{
-		cout << "Ведите число >2" << endl;
-		main();
-	}
+
+	return 0;
 }
