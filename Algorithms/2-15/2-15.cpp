@@ -5,28 +5,29 @@ using namespace std;
 int main()
 {
     setlocale(LC_ALL, "RUS");
-    int n, s, k;
+    int N, S, k;
     bool flag = false;
 
-    cin >> n >> s;
+    cout << "Введите число N и число S" << endl;
+    cin >> N >> S;
 
-    while (n > 0 && !flag)
+    while (N > 0 && !flag)
     {
-        k = n % 10;
-        if (k == s)
+        k = N % 10;
+        if (k == S)
         {
             flag = true;
-            cout << "����� �������" << endl;
+            cout << "Число S входит в запись числа N" << endl;
         }
         else
         {
-            n /= 10;
+            N /= 10;
         }
     }
 
     if (!flag)
     {
-        cout << "����� �� �������" << endl;
+        cout << "Число S не входит в запись числа N" << endl;
     }
 
     return 0;
