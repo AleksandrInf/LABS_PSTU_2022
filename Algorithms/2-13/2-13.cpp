@@ -10,7 +10,7 @@ int main()
     float a, b, c, d, x1, x2;
 
     cin >> a >> b >> c;
-    d = pow(b, 2) - 4 * a * c; // или b*b - 4*a*c
+    d = pow(b, 2) - 4 * a * c;
 
     if (d > 0)
     {
@@ -26,6 +26,6 @@ int main()
     }
     else
     {
-        cout << "Корней нет" << endl;
+        cout << "РљРѕСЂРЅРµР№ РЅРµС‚" << endl;
     }
 }
