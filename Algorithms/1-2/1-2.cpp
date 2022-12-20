@@ -1,26 +1,22 @@
 #include <iostream>
 
 using namespace std;
-int main() {
-    float a;
-    cin >> a;
 
-    if (a < 5) {
-        cout << a * 3 << endl; 
-    }
+int main()
+{
+    float a, b;
 
-    else if (a > 7) {
-        cout << a + 3 << endl;
-    }
-    
-    else {
-        cout << a / 10 << endl;
-    }
+    cin >> a >> b;
 
+    if (b == 0)
+    {
+        cout << "На ноль делить нельзя!" << endl;
+    }
+    else
+    {
+        cout << a / b << endl;
+    }
     return 0;
-
 }
 
-
-    
 
