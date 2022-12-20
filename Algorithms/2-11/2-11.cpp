@@ -5,34 +5,42 @@ using namespace std;
 int main()
 {
     setlocale(LC_ALL, "RUS");
-    int n, tmp;
-    bool plusFirst = false; // flag
-    bool minusFirst = false; // flag
+    int n, num;
+    bool plusFirst = false; 
+    bool minusFirst = false;
 
-    cout << "Ââåäèòå äëèíó ïîñëåäîâàòåëüíîñòè:" << endl;
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‡Ð¸ÑÐµÐ» Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸" << endl;
     cin >> n;
 
     for (int i = 1; i <= n; i++)
     {
-        cin >> tmp;
+        cin >> num;
         if (!plusFirst && !minusFirst)
         {
-            if (tmp > 0) { plusFirst = true; }
-            else if (tmp < 0) { minusFirst = true; }
+            if (num > 0) 
+            { 
+                plusFirst = true; 
+            }
+            else if (num < 0) 
+            { 
+                minusFirst = true; 
+            }
         }
     }
 
     if (plusFirst)
     {
-        cout << "Ñíà÷àëà ââåëè ïîëîæèòåëüíîå ÷èñëî";
+        cout << "Ð¡Ð½Ð°Ñ‡Ð°Ð»Ð° Ð²Ð²ÐµÐ»Ð¸ Ð¿Ð¾Ð»Ð¾Ð¶Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾";
     }
     else if (minusFirst)
     {
-        cout << "Ñíà÷àëà ââåëè îòðèöàòåëüíîå ÷èñëî";
+        cout << "Ð¡Ð½Ð°Ñ‡Ð°Ð»Ð° Ð²Ð²ÐµÐ»Ð¸ Ð¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾";
     }
     else
     {
-        cout << "Âñå áûëè íóëåâûìè";
+        cout << "Ð’ÑÐµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð±Ñ‹Ð»Ð¸ Ð½ÑƒÐ»ÐµÐ²Ñ‹Ð¼Ð¸";
     }
     cout << endl;
+
+	return 0;
 }
