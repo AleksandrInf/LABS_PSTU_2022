@@ -1,24 +1,26 @@
 #include <iostream>
 
-using namespace std;
-int main() {
-    int n; int sum = 0;
-    cin >> n;
-    
-    if (n <= 0) {
-        cout << "Невозможно посчтитать сумму натуральных чисел при n <= 0" << endl;
+using namespace std; 
+
+int main()
+{
+    float a;
+
+    cin >> a;
+
+    if (a < 5)
+    {
+        cout << a * 3 << endl;
     }
-
-    else {
-        for (int i = 1; i <= n; i++) {
-            sum += i;
-        }
-
-        cout << sum << endl;
+    else if (a > 7)
+    {
+        cout << a + 3 << endl;
     }
-
+    else
+    {
+        cout << a / 10 << endl;
+    }
     return 0;
-
 }
 
 
