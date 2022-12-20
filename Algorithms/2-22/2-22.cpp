@@ -6,26 +6,28 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "RUS");
+	float n, a, max;
+	int i = 2;
+	int num = 1;
 
-    float n, a, max;
-    int i = 2;
-    int num = 1;
+	cout << "Введите количество элементов n" << endl;
+	cin >> n;
 
-    cin >> n;
+	max = sin(n + 1 / n);
 
-    max = sin(n + 1 / n);
+	while (i <= n)
+	{
+		a = sin(n + i / n);
+		if (a > max)
+		{
+			max = a;
+			num = i;
+		}
+		i++;
 
-    while (i <= n)
-    {
-        a = sin(n + 1 / n);
-        if (a > max)
-        {
-            max = a;
-            num = i;
-        }
-        i++;
-    }
-    cout << "������������ �������: " << max << " ��� �����: " << num << endl;
+	}
+	cout << "Максимальный элемент последовательности" << max << endl;
+	cout << "Его номер:" << num << endl;
 
 	return 0;
 }
