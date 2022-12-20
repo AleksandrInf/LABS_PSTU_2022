@@ -4,29 +4,31 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "RUS");
-    int n, tmp, max, min;
+	setlocale(LC_ALL, "RUS");
+    int n, num, max, min;
 
-    cout << "Ââåäèòå äëèíó ïîñëåäîâàòåëüíîñòè:" << endl;
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‡Ð¸ÑÐµÐ» Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸" << endl;
     cin >> n;
 
-    cout << "Ââåäèòå ïåðâîå ÷èñëî:" << endl;
-    cin >> tmp;
-    max = tmp;
-    min = tmp;
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿ÐµÑ€Ð²Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾:" << endl;
+    cin >> num;
+    max = num;
+    min = num;
 
     for (int i = 2; i <= n; i++)
     {
-        cout << "Ââåäèòå ñëåäóþùåå ÷èñëî:" << endl;
-        cin >> tmp;
-        if (tmp > max)
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ´ÑƒÑŽÑ‰ÐµÐµ Ñ‡Ð¸ÑÐ»Ð¾" << endl;
+        cin >> num;
+        if (num > max)
         {
-            max = tmp;
+            max = num;
         }
-        else if (tmp < min)
+        else if (num < min)
         {
-            min = tmp;
+            min = num;
         }
     }
-    cout << "Ñóììà ìàêñèìàëüíîãî è ìèíèìàëüíîãî ýëåìåíòîâ: " << (max + min) << endl;
+    cout << "Ð¡ÑƒÐ¼Ð¼Ð° Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾ Ð¸ Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²: " << (max + min) << endl;
+
+    return 0;
 }
