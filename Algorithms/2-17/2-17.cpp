@@ -9,7 +9,7 @@ int main()
 	int n;
 	float x, fact, sum;
 
-	cout << "Ââåäèòå çíà÷åíèå äëÿ n è x:" << endl;
+	cout << "Введите значение для n и x:" << endl;
 	cin >> n >> x;
 
 	sum = 1 + x;
@@ -20,7 +20,7 @@ int main()
 		fact *= i;
 		sum += (pow(x, i) / fact);
 	}
-	cout << "Çíà÷åíèå ìíîãî÷ëåíà ðàâíî: " << sum << endl;
+	cout << "Значение многочлена равно: " << sum << endl;
 
 	return 0;
 }
