@@ -1,23 +1,26 @@
 #include <iostream>
-
 using namespace std;
-int main() {
-    int cl;
-    cin >> cl;
 
-	for (int i = 0; i < cl; i++) {
-		cout << '*';
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int n, numofstars;
+	cout << "Введите число N" << endl;
+	cin >> n;
+
+	if (n <= 2)
+	{
+		cout << "Введите корректное значение N" << endl;
 	}
-	cout << endl;
-	for (int i = 0; i < cl - 2; i++) {
-		cout << '*';
-		for (int j = 0; j < cl - 2; j++) {
-			cout << ' ';
+	numofstars = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		for (int j = 1; j <= numofstars; j++)
+		{
+			cout << "* ";
 		}
-		cout << '*' << endl;
+		numofstars++;
+		cout << endl;
 	}
-	for (int i = 0; i < cl; i++) {
-		cout << '*';
-	}
-	cout << endl;
+	return 0;
 }
