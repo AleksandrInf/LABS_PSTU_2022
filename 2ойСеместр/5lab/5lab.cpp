@@ -15,6 +15,6 @@ int main() {
 	vector<double> v1 = { 1.0, 2.0, 3.0 };
 	vector<double> v2 = { 4.0, 5.0, 6.0 };
 	double result = dotProduct(v1, v2);
-	cout << "Ñêàëÿðíîå ïðîèçâåäåíèå âåêòîðîâ v1 è v2 ðàâíî = " << result << endl;
+	cout << "Ð¡ÐºÐ°Ð»ÑÑ€Ð½Ð¾Ðµ Ð¿Ñ€Ð¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ Ð²ÐµÐºÑ‚Ð¾Ñ€Ð¾Ð² v1 Ð¸ v2 Ñ€Ð°Ð²Ð½Ð¾ = " << result << endl;
 	return 0;
 }
