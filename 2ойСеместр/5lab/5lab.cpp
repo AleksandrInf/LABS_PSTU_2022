@@ -1,20 +1,50 @@
 #include <iostream>
-#include <vector>
+
 using namespace std;
 
-double dotProduct(vector<double> v1, vector<double> v2) {
-	double result = 0.0;
-	for (int i = 0; i < v1.size(); i++) {
-		result += v1[i] * v2[i];
+const int MAX_SIZE = 100;
 
-	}
-	return result;
+bool isOrthogonal(double matrix[][MAX_SIZE], int size) {
+    // Проверяем первое условие
+    for (int i = 0; i < size; i++) {
+        for (int j = i + 1; j < size; j++) {
+            double dot_product = 0;
+            for (int k = 0; k < size; k++) {
+                dot_product += matrix[i][k] * matrix[j][k];
+            }
+            if (dot_product != 0) {
+                return false;
+            }
+        }
+    }
+    
+    // Проверяем второе условие
+    for (int i = 0; i < size; i++) {
+        double dot_product = 0;
+        for (int k = 0; k < size; k++) {
+            dot_product += matrix[i][k] * matrix[i][k];
+        }
+        if (dot_product != 1) {
+            return false;
+        }
+    }
+    
+    return true;
 }
 
 int main() {
-	vector<double> v1 = { 1.0, 2.0, 3.0 };
-	vector<double> v2 = { 4.0, 5.0, 6.0 };
-	double result = dotProduct(v1, v2);
-	cout << "Скалярное произведение векторов v1 и v2 равно = " << result << endl;
-	return 0;
+    // Пример матрицы
+    double matrix[3][3] = {
+        {1, 0, 0},
+        {0, 1, 0},
+        {0, 0, 1}
+    };
+    
+    if (isOrthogonal(matrix, 3)) {
+        cout << "Матрица ортонормированная" << endl;
+    } else {
+        cout << "Матрица не ортонормированная" << endl;
+    }
+    
+    return 0;
 }
